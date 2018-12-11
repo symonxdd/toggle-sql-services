@@ -1,0 +1,9 @@
+﻿<Application x:Class="Toggle_SQL_Services.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Toggle_SQL_Services"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        
+    </Application.Resources>
+</Application>

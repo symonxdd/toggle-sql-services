@@ -319,5 +319,15 @@ namespace Toggle_SQL_Services
             return startupType;
 
         }
+
+        private void Window_Activated(object sender, EventArgs e)
+        {
+            WindowDeactivatedMask.Visibility = Visibility.Collapsed;
+        }
+
+        private void Window_Deactivated(object sender, EventArgs e)
+        {
+            WindowDeactivatedMask.Visibility = Visibility.Visible;
+        }
     }
 }

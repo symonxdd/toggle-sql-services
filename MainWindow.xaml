@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="207" Width="342"
         WindowStyle="None" AllowsTransparency="True" Background="Transparent"
-        MouseLeftButtonDown="Window_MouseLeftButtonDown" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        MouseLeftButtonDown="Window_MouseLeftButtonDown" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+        Activated="Window_Activated" Deactivated="Window_Deactivated">
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
@@ -61,8 +62,8 @@
                 </Style>
             </Button.Style>
         </Button>
-        <Rectangle Fill="#00000000" HorizontalAlignment="Left" Height="230" VerticalAlignment="Top" Width="22" Margin="-16,-14,0,-9"/>
-        <Rectangle Fill="#00000000" HorizontalAlignment="Left" Height="348" VerticalAlignment="Top" Width="22" Margin="169,38,0,-179" RenderTransformOrigin="0.5,0.5">
+        <Rectangle x:Name="Rectangle1" HorizontalAlignment="Left" Height="230" VerticalAlignment="Top" Width="22" Margin="-21,-11,0,-12"/>
+        <Rectangle x:Name="Rectangle2" HorizontalAlignment="Left" Height="348" VerticalAlignment="Top" Width="22" Margin="159,43,0,-184" RenderTransformOrigin="0.5,0.5">
             <Rectangle.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -72,7 +73,7 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
-        <Rectangle Fill="#00000000" HorizontalAlignment="Left" Height="330" VerticalAlignment="Top" Width="22" Margin="160,-170,0,0" RenderTransformOrigin="0.5,0.5">
+        <Rectangle x:Name="Rectangle4" HorizontalAlignment="Left" Height="354" VerticalAlignment="Top" Width="22" Margin="163,-187,0,0" RenderTransformOrigin="0.5,0.5">
             <Rectangle.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -82,7 +83,7 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
-        <Rectangle Fill="#00000000" HorizontalAlignment="Left" Height="212" VerticalAlignment="Top" Width="15" Margin="336,-11,-9,0"/>
+        <Rectangle x:Name="Rectangle3" HorizontalAlignment="Left" Height="212" VerticalAlignment="Top" Width="15" Margin="341,-5,-14,0"/>
         <Button x:Name="btnClose" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Margin="297,20,0,0" Height="25" Foreground="White" Content="X" FontSize="14" Click="BtnClose_Click" FontWeight="Bold">
             <Button.Style>
                 <Style TargetType="{x:Type Button}">
@@ -129,6 +130,7 @@
         </Button>
         <Label x:Name="lblTesting" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="247,74,0,0" Background="Magenta" Width="62" Visibility="Hidden"/>
         <ProgressBar x:Name="pbStatus" HorizontalAlignment="Left" Height="6" VerticalAlignment="Top" Width="342" Margin="0,201,0,0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2C2E3E"/>
+        <Rectangle x:Name="WindowDeactivatedMask" HorizontalAlignment="Left" Height="207" VerticalAlignment="Top" Width="342" Fill="#33000000" IsHitTestVisible="False"/>
 
     </Grid>
 </Window>
